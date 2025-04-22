@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from garagem.views import AcessorioViewSet, CorViewSet, ModeloViewSet
+from garagem.views import AcessorioViewSet, CorViewSet, ModeloViewSet, VeiculoViewSet
 
 router = DefaultRouter()
 router.register(r'acessorios', AcessorioViewSet)
 router.register(r'cores', CorViewSet)
-router.register(r'modelos', ModeloViewSet)  # Assuming you have a ModelViewSet for Modelo
+router.register(r'modelos', ModeloViewSet) 
+router.register(r'veiculos', VeiculoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
